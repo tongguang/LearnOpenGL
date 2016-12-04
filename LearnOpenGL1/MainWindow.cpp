@@ -29,6 +29,7 @@ CMainWindow::CMainWindow()
 
 CMainWindow::~CMainWindow()
 {
+	glfwTerminate();
 }
 
 void CMainWindow::InitInstance()
