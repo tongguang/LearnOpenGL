@@ -18,9 +18,6 @@
     <ClInclude Include="MainWindow.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Commons.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainWindow.cpp">
