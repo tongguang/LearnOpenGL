@@ -32,6 +32,31 @@ CMainWindow::~CMainWindow()
 	glfwTerminate();
 }
 
-void CMainWindow::InitInstance()
+CMainWindow* CMainWindow::GetInstance()
 {
+	if (!s_Instance)
+	{
+		s_Instance = new CMainWindow();
+	}
+	return s_Instance;
+}
+
+void CMainWindow::DestroyInstance()
+{
+	if (s_Instance)
+	{
+		delete s_Instance;
+		s_Instance = nullptr;
+	}
+}
+
+GLFWwindow * CMainWindow::GetWindow()
+{
+	return this->_window;
+}
+
+void CMainWindow::Update()
+{
+	glfwPollEvents();
+	glfwSwapBuffers(this->_window);
 }
