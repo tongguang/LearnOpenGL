@@ -69,8 +69,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\Learn\LearnOpenGL\3rd\glfw\include;D:\Learn\LearnOpenGL\3rd\glew\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Learn\LearnOpenGL\3rd\glew\lib\Release\Win32;D:\Learn\LearnOpenGL\3rd\glfw\lib-vc2015;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\3rd\glfw\include;..\3rd\glew\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\3rd\glew\lib\Release\Win32;..\3rd\glfw\lib-vc2015;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
