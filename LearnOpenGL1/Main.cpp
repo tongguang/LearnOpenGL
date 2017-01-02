@@ -9,11 +9,7 @@ int main()
 {
 	
 	auto mainWindow = CMainWindow::GetInstance();
-	auto window = mainWindow->GetWindow();
-	while (!glfwWindowShouldClose(window))
-	{
-		mainWindow->Update();
-	}
+	mainWindow->Run();
 	DestroyInstance();
 	return 0;
 }

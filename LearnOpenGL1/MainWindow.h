@@ -9,7 +9,7 @@ public:
 	~CMainWindow();
 	static CMainWindow* GetInstance();
 	static void DestroyInstance();
-	GLFWwindow* GetWindow();
+	void Run();
 	void Update();
 
 

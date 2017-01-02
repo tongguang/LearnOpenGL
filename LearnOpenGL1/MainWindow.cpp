@@ -50,9 +50,12 @@ void CMainWindow::DestroyInstance()
 	}
 }
 
-GLFWwindow * CMainWindow::GetWindow()
+void CMainWindow::Run()
 {
-	return this->_window;
+	while (!glfwWindowShouldClose(this->_window))
+	{
+		this->Update();
+	}
 }
 
 void CMainWindow::Update()
