@@ -14,7 +14,7 @@ public:
 
 
 private:
-	GLFWwindow* _window;
+	GLFWwindow* _Window;
 
 	static CMainWindow* s_Instance;
 };

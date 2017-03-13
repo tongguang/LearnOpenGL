@@ -13,9 +13,9 @@ CMainWindow::CMainWindow()
 	int w, h;
 	w = 800;
 	h = 600;
-	this->_window = glfwCreateWindow(w, h, "LearnOpenGL", nullptr, nullptr);
+	this->_Window = glfwCreateWindow(w, h, "LearnOpenGL", nullptr, nullptr);
 
-	glfwMakeContextCurrent(this->_window);
+	glfwMakeContextCurrent(this->_Window);
 	glewExperimental = GL_TRUE;
 
 	if (glewInit() != GLEW_OK)
@@ -23,7 +23,7 @@ CMainWindow::CMainWindow()
 	}
 
 	int width, height;
-	glfwGetFramebufferSize(this->_window, &width, &height);
+	glfwGetFramebufferSize(this->_Window, &width, &height);
 	glViewport(0, 0, width, height);
 }
 
@@ -52,7 +52,7 @@ void CMainWindow::DestroyInstance()
 
 void CMainWindow::Run()
 {
-	while (!glfwWindowShouldClose(this->_window))
+	while (!glfwWindowShouldClose(this->_Window))
 	{
 		this->Update();
 	}
@@ -61,5 +61,5 @@ void CMainWindow::Run()
 void CMainWindow::Update()
 {
 	glfwPollEvents();
-	glfwSwapBuffers(this->_window);
+	glfwSwapBuffers(this->_Window);
 }
